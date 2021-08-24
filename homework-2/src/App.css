@@ -1,0 +1,74 @@
+#root {
+  padding: 15px;
+}
+
+img {
+  max-width: 100%;
+  opacity: 0;
+  transition: .5s all ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+.user-img {
+  min-height: 400px;
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  width: 200px;
+  right: calc(50% - 100px);
+  left: calc(50% - 100px);
+  bottom: calc(50% - 100px);
+  top: calc(50% - 100px);
+  animation: loader 1s infinite;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.user-info {
+  position: relative;
+  padding: 15px;
+}
+
+.interviewed-placeholder {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.green-text {
+  color: green;
+}
+
+.green-border {
+  border: 2px solid green;
+}
+.red-border {
+  border: 2px solid red;
+}
+
+
+@keyframes loader {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}

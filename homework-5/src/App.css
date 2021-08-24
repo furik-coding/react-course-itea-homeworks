@@ -1,0 +1,60 @@
+#root {
+  padding: 30px;
+}
+
+label {
+  margin: 30px 0;
+  display: block;
+}
+
+.under-item {
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.border-blue {
+  border: 1px solid blue;
+}
+
+.color-red {
+  color: red;
+}
+
+.bg-red {
+  background: red;
+}
+
+.border-red {
+  border: 1px solid red;
+}
+
+.color-yellow {
+  color: yellow;
+}
+
+.bg-yellow {
+  background: yellow;
+}
+
+.border-yellow {
+  border: 1px solid yellow;
+}
+
+.flex-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-item {
+  padding: 10px;
+  list-style: none;
+}

@@ -1,0 +1,48 @@
+import React from 'react';
+import { ThemeContext } from '../ContextDemo/context.helper';
+
+const Cell = ({ children, type, cells, background, color, currency, head }) => {
+
+    let curVal;
+
+    if (type === 'money' && currency) {
+        curVal = currency;
+    } else if (type === 'money' || currency) {
+        curVal = '';
+        console.error('Type or currensy is not defined');
+    } else {
+        curVal = '';
+    }
+
+    return (
+        <ThemeContext.Consumer>
+            {
+                theme => {
+                    if (head) {
+                        return (
+                            <th style={{ backgroundColor: background, color: color, borderColor: theme }} colSpan={cells} className={type ? 'type-' + type : 'type-text'} >
+                                {children + '' + curVal}
+                            </th>
+                        )
+                    } else {
+                        return (
+                            <td style={{ backgroundColor: background, color: color, borderColor: theme }} colSpan={cells} className={type ? 'type-' + type : 'type-text'} >
+                                {children + '' + curVal}
+                            </td>
+                        )
+                    }
+                }
+            }
+        </ThemeContext.Consumer>
+    )
+
+}
+
+Cell.defaultProps = {
+    type: 'text',
+    cells: 1,
+    background: 'transparent',
+    color: 'black'
+}
+
+export default Cell;

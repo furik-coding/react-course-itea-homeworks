@@ -1,0 +1,29 @@
+#root {
+  padding: 30px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  display: table-row;
+}
+
+th, td {
+  width: 50px;
+  padding: 10px;
+}
+
+.type-date {
+  font-style: italic;
+  text-align: left;
+}
+
+.type-number, .type-money {
+  text-align: right;
+}
+
+.type-text {
+  text-align: left;
+}
